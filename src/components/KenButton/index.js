@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { activeTheme } from '../../Utils/Themes/themeHelper';
 
 export const KenButtonDefault = styled(Button)`
   border-radius: 3px;
@@ -15,56 +13,9 @@ export const KenButtonDefault = styled(Button)`
 `;
 
 const KenButtonSecondary = styled(KenButtonDefault)`
-  border: 1px solid ${(props) => props.theme.palette.KenColors.neutral60};
+  border: 1px solid ;
 `;
-
-const StatusButton = styled(Button)`
-  border-radius: 4px;
-  color: white;
-  height: 20px;
-  font-weight: 500;
-  font-size: 12px;
-  padding: 4px 8px;
-  box-shadow: none;
-  text-transform: none;
-`;
-
-const RoundedButton = styled(Button)`
-  border-radius: 32px;
-  background: linear-gradient(114.33deg, #20365c 6.4%, #060b6b 108.85%);
-  color: white;
-  height: 40px;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 9px 32px;
-  box-shadow: none;
-  text-transform: none;
-  &&& {
-    &.Mui-disabled {
-      color: rgba(0, 0, 0, 0.26);
-      background: #f3f5f7;
-    }
-  }
-`;
-const RoundedButtonOutlined = styled(Button)`
-  border-radius: 32px;
-  background: white;
-  color: linear-gradient(114.33deg, #20365c 6.4%, #060b6b 108.85%);
-  height: 40px;
-  font-weight: 500;
-  font-size: 14px;
-  border: 2px solid linear-gradient(114.33deg, #20365c 6.4%, #060b6b 108.85%);
-  padding: 9px 32px;
-  box-shadow: none;
-  text-transform: none;
-  &&& {
-    &.Mui-disabled {
-      color: rgba(0, 0, 0, 0.26);
-      background: #f3f5f7;
-    }
-  }
-`;
-
+ 
 export default function KenButton(props) {
   const {
     variant,
@@ -90,18 +41,10 @@ export default function KenButton(props) {
           type={type}
           form={form}
           {...propsCopy}
-          // color='primary'
+          color='primary'
           variant="contained"
           disableElevation
-          style={{
-            backgroundColor: disabled
-              ? activeTheme.buttonPrimary.disabledBackgroundColor
-              : activeTheme.buttonPrimary.backgroundColor,
-            color: disabled
-              ? activeTheme.buttonPrimary.disabledTextColor
-              : activeTheme.buttonPrimary.textColor,
-            ...style,
-          }}
+         
           className={buttonClass}
         >
           {label || children}
@@ -111,7 +54,6 @@ export default function KenButton(props) {
       return (
         <KenButtonSecondary
           data-testid="button"
-          {...propsCopy}
           variant="outlined"
           color="primary"
           className={buttonClass}
@@ -121,56 +63,7 @@ export default function KenButton(props) {
           {label || children}
         </KenButtonSecondary>
       );
-    case 'roundedButton':
-      return (
-        <RoundedButton
-          data-testid="button"
-          {...propsCopy}
-          variant="contained"
-          color="primary"
-          className={buttonClass}
-        >
-          {label || children}
-        </RoundedButton>
-      );
-    case 'roundedButtonOutlined':
-      return (
-        <RoundedButtonOutlined
-          data-testid="button"
-          {...propsCopy}
-          variant="outlined"
-          // color="primary"
-          className={buttonClass}
-        >
-          {label || children}
-        </RoundedButtonOutlined>
-      );
-    case 'error':
-      return (
-        <StatusButton
-          data-testid="button"
-          {...propsCopy}
-          variant="contained"
-          color="error"
-          type={type}
-          form={form}
-        >
-          <Typography noWrap>{label || children}</Typography>
-        </StatusButton>
-      );
-    case 'success':
-      return (
-        <StatusButton
-          data-testid="button"
-          {...propsCopy}
-          variant="contained"
-          color="success"
-          type={type}
-          form={form}
-        >
-          {label || children}
-        </StatusButton>
-      );
+   
 
     default:
       return (
@@ -180,16 +73,7 @@ export default function KenButton(props) {
           form={form}
           {...propsCopy}
           color="primary"
-          // className={buttonClass}
-          // style={{
-          //   backgroundColor: disabled
-          //     ? activeTheme.buttonPrimary.disabledBackgroundColor
-          //     : activeTheme.buttonPrimary.backgroundColor,
-          //   color: disabled
-          //     ? activeTheme.buttonPrimary.disabledTextColor
-          //     : activeTheme.buttonPrimary.textColor,
-          //   ...style,
-          // }}
+           
         >
           {label || children}
         </KenButtonDefault>
