@@ -1,17 +1,13 @@
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Header from "./Layout/Header";
- 
+
 function App() {
   return (
     <Box>
-      {/* <Container> */}
-      <Header/>
-      {/* <KenButton
-        label="Paid"
-        variant="secondary"
-        // className={classes.statusButton}
-      /> */}
-      {/* </Container> */}
+      <Header />
+      <Container>
+        hello
+      </Container>
     </Box>
   );
 }
