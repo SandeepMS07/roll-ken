@@ -13,6 +13,8 @@ export default function KenInput(props) {
       autoComplete="off"
     >
       <TextField
+        sx={{ color: "#C0E5FF" }}
+        // color="success"
         value={value}
         id={id}
         type={type}

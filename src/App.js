@@ -1,15 +1,12 @@
-// import KenButton from "./components/KenButton";
-
 import { Container } from "@mui/material";
-import NewsLetter from "./layout/NewsLetter";
+import Footer from "./layout/Footer";
+import { ContactForm } from "./layout";
 
 function App() {
   return (
     <div>
-      {/* <KenButton /> */}
-      <Container>
-        <NewsLetter />
-      </Container>
+      <ContactForm />
+      <Footer />
     </div>
   );
 }
