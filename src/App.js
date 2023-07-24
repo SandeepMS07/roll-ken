@@ -1,13 +1,19 @@
-import { Container } from "@mui/material";
-import Footer from "./layout/Footer";
+ 
+import { Box, Container } from "@mui/material";
+import Header from "./Layout/Header";
+    import Footer from "./layout/Footer";
 import { ContactForm } from "./layout";
-
 function App() {
   return (
-    <div>
+    <Box>
+      <Header />
+      <Container>
+        hello
+      </Container>
       <ContactForm />
       <Footer />
-    </div>
+    </Box>
+ 
   );
 }
 
