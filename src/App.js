@@ -1,6 +1,8 @@
+ 
 import { Box, Container } from "@mui/material";
 import Header from "./Layout/Header";
-
+    import Footer from "./layout/Footer";
+import { ContactForm } from "./layout";
 function App() {
   return (
     <Box>
@@ -8,7 +10,10 @@ function App() {
       <Container>
         hello
       </Container>
+      <ContactForm />
+      <Footer />
     </Box>
+ 
   );
 }
 
